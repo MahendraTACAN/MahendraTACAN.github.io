@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mahendra Singh Moure • Recruiter Portfolio</title>
+  <meta name="description" content="Portfolio of Mahendra Singh Moure — Recruiter specializing in end-to-end, technology, banking, semiconductors, and North America recruitment.">
+  <meta name="author" content="Mahendra Singh Moure">
+  <meta property="og:title" content="Mahendra Singh Moure • Recruiter" />
+  <meta property="og:description" content="End-to-end Recruitment • Technology • Banking • Semiconductors • US & Canada (Quebec) • Stakeholder Management" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/og-cover.jpg" />
+  <meta property="og:url" content="https://MahendraTACAN.github.io/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0B1B2B;      /* Navy Blue */
+      --black: #0A0A0A;     /* Black */
+      --gold: #D4AF37;      /* Gold */
+      --beige: #F5F0E6;     /* Beige */
+      --silver: #C0C0C0;    /* Silver */
+      --text: #e8edf3;
+      --muted: #9fb0c4;
+      --card: #0f2236;
+      --ring: rgba(212, 175, 55, 0.35);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 20px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--navy),#091420 60%, #08101b);color:var(--text);font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans","Apple Color Emoji","Segoe UI Emoji";scroll-behavior:smooth}
+    a{color:var(--gold);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Layout */
+    .container{max-width:1180px;margin:0 auto;padding:0 20px}
+    .section{padding:72px 0}
+    .grid{display:grid;gap:24px}
+
+    /* Navbar */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(8,16,27,.6);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.4px}
+    .badge{padding:3px 8px;border:1px solid var(--gold);border-radius:999px;font-size:12px;color:var(--gold);opacity:.9}
+    .nav a{margin-left:18px;color:#d8e6f8;opacity:.9}
+
+    /* Hero */
+    .hero{display:grid;gap:32px;grid-template-columns:1.2fr .8fr;align-items:center}
+    .hero h1{font-size: clamp(2rem, 6vw, 3.2rem);line-height:1.1;margin:0 0 14px}
+    .hero p.lead{font-size:clamp(1rem,2.2vw,1.2rem);color:#c9d6e6;margin:0 0 24px}
+    .hero-card{background:linear-gradient(145deg,#0f2236,#0a1b2a);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+    .btn{display:inline-flex;align-items:center;gap:10px;border-radius:14px;padding:12px 16px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:#e8edf3}
+    .btn:hover{border-color:var(--gold);box-shadow:0 0 0 4px var(--ring)}
+    .btn.primary{background:linear-gradient(90deg,var(--gold),#e9d68f);color:#111;font-weight:700}
+    .btn.ghost{background:transparent}
+    .meta{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+
+    /* Avatar */
+    .avatar{position:relative;border-radius:24px;overflow:hidden;background:radial-gradient(120px 120px at 20% 10%, #13304d 10%, #0b1b2b 60%);border:1px solid rgba(255,255,255,.07);box-shadow:var(--shadow)}
+    .avatar img{display:block;width:100%;height:auto}
+    .avatar .tag{position:absolute;bottom:16px;left:16px;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08);padding:6px 10px;border-radius:999px;color:#dce7f5;font-size:12px}
+
+    /* Section titles */
+    .eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.25em;font-weight:700;font-size:12px;margin-bottom:6px}
+    .title{font-size:clamp(1.4rem,3vw,2rem);margin:0 0 4px}
+    .subtitle{color:#cbd9ea;margin:0 0 18px;font-size:16px}
+
+    /* Cards */
+    .card{background:linear-gradient(180deg,#0f2236,#0b1b2b);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .card:hover{transform:translateY(-2px)}
+
+    /* Skills */
+    .skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .skill{padding:16px;border:1px solid rgba(255,255,255,.06);border-radius:16px;background:rgba(255,255,255,.03)}
+    .skill h4{margin:0 0 6px;font-weight:700}
+    .rating{height:10px;border-radius:999px;background:rgba(255,255,255,.08);position:relative;overflow:hidden}
+    .rating span{position:absolute;left:0;top:0;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--gold),#b79b2e)}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .chip{border:1px solid rgba(255,255,255,.12);padding:8px 10px;border-radius:999px;background:rgba(255,255,255,.04);font-size:13px;color:#dbe6f5}
+
+    /* Timeline */
+    .timeline{position:relative;margin-left:6px;padding-left:18px}
+    .timeline:before{content:"";position:absolute;left:4px;top:0;bottom:0;width:2px;background:linear-gradient(var(--gold),transparent)}
+    .item{position:relative;margin-bottom:18px}
+    .item:before{content:"";position:absolute;left:-6px;top:6px;width:12px;height:12px;background:var(--gold);border-radius:999px;box-shadow:0 0 0 3px rgba(212,175,55,.2)}
+    .role{font-weight:700;margin:0}
+    .org{color:#cbd9ea;margin:4px 0 8px}
+    .bullets{margin:0;padding-left:18px;color:#d6e3f4}
+
+    /* Testimonials */
+    .testimonials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .t{display:grid;grid-template-columns:48px 1fr;gap:14px}
+    .avatar-zero{width:48px;height:48px;border-radius:999px;background:linear-gradient(135deg,#2b3f57,#1a2b40);border:1px solid rgba(255,255,255,.08)}
+    .t h4{margin:0 0 2px}
+    .t small{color:#b7c7da}
+    blockquote{margin:8px 0 0;color:#d9e6f7;opacity:.95}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .contact-card{display:flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:14px;background:rgba(255,255,255,.03)}
+
+    /* Footer */
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:24px 0;color:#c0cfdf}
+
+    /* Palette strip */
+    .palette{display:flex;gap:8px;margin-top:10px}
+    .swatch{width:56px;height:24px;border-radius:6px;border:1px solid rgba(255,255,255,.2)}
+    .swatch.navy{background:var(--navy)}
+    .swatch.black{background:var(--black)}
+    .swatch.gold{background:var(--gold)}
+    .swatch.beige{background:var(--beige)}
+    .swatch.silver{background:var(--silver)}
+
+    /* Responsive */
+    @media (max-width: 960px){
+      .hero{grid-template-columns:1fr}
+      .skills{grid-template-columns:1fr}
+      .testimonials{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <span class="badge">Portfolio</span>
+        <span>Mahendra Singh Moure</span>
+      </div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#testimonials">Recommendations</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="section">
+    <div class="container hero">
+      <div class="hero-card">
+        <div class="eyebrow">Recruiter • Banking • Tech • Semiconductors</div>
+        <h1>Mahendra Singh Moure</h1>
+        <p class="lead">End-to-end recruiter with 7+ years of experience across US & Canada (incl. Quebec) and Federal/Government-cleared roles. I help teams hire faster with a candidate-first approach, strong stakeholder management, and smart use of AI and sourcing tools.</p>
+        <div class="meta">
+          <span>📍 Bhopal, Madhya Pradesh, India</span>
+          <span>✉️ <a href="mailto:msmoure0024@gmail.com">msmoure0024@gmail.com</a></span>
+          <span>☎️ <a href="tel:+918319497978">+91 8319497978</a></span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="mailto:msmoure0024@gmail.com">Book a call</a>
+          <a class="btn" href="resume.pdf" download>Download Resume (PDF)</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/mahendramoure/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/MahendraTACAN" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+      <div class="avatar">
+        <!-- Replace with your own image at /assets/profile-main.jpg -->
+        <img src="/assets/profile-main.jpg" alt="Mahendra Singh Moure portrait" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'900\'><rect width=\'100%\' height=\'100%\' fill=\'%2313314b\'/><text x=\'50%\' y=\'52%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23d4af37\' font-family=\'Inter, Arial\' font-size=\'28\'>Upload profile-main.jpg</text></svg>'">
+        <span class="tag">Open to collaborate with global teams</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container grid" style="grid-template-columns: .9fr 1.1fr;align-items:center;gap:28px">
+      <div class="avatar">
+        <!-- Replace with your own image at /assets/profile-about.jpg -->
+        <img src="/assets/profile-about.jpg" alt="Mahendra working" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'900\' height=\'600\'><rect width=\'100%\' height=\'100%\' fill=\'%230b1b2b\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23d4af37\' font-family=\'Inter, Arial\' font-size=\'24\'>Upload profile-about.jpg</text></svg>'">
+      </div>
+      <div>
+        <div class="eyebrow">About</div>
+        <h2 class="title">I connect great people with great work.</h2>
+        <p class="subtitle">I’ve recruited for Citi, TD Bank, Intel, Perspecta, US Marine Corps, Deloitte, and the State of Maine—across technology, banking/finance, and semiconductor/embedded roles. Previously Recruiting Lead (IC) at Motion Recruitment, Group Lead at 4 Consulting, and mentor at Artech.</p>
+        <div class="palette">
+          <div class="swatch navy" title="#0B1B2B"></div>
+          <div class="swatch black" title="#0A0A0A"></div>
+          <div class="swatch gold" title="#D4AF37"></div>
+          <div class="swatch beige" title="#F5F0E6"></div>
+          <div class="swatch silver" title="#C0C0C0"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section id="expertise" class="section">
+    <div class="container">
+      <div class="eyebrow">Expertise</div>
+      <h3 class="title">What I’m best at</h3>
+      <p class="subtitle">Ratings are self-assessed on a 5-point scale.</p>
+      <div class="skills">
+        <div class="skill">
+          <h4>End-to-end Recruitment <span style="color:var(--gold)">5/5</span></h4>
+          <div class="rating" aria-label="End-to-end Recruitment: 5 out of 5"><span style="width:100%"></span></div>
+        </div>
+        <div class="skill">
+          <h4>Technology Recruitment <span style="color:var(--gold)">5/5</span></h4>
+          <div class="rating" aria-label="Technology Recruitment: 5 out of 5"><span style="width:100%"></span></div>
+        </div>
+        <div class="skill">
+          <h4>Banking & Financial Services <span style="color:var(--gold)">5/5</span></h4>
+          <div class="rating" aria-label="Banking Recruitment: 5 out of 5"><span style="width:100%"></span></div>
+        </div>
+        <div class="skill">
+          <h4>Semiconductor & Embedded Systems</h4>
+          <div class="rating" aria-label="Semiconductor & Embedded"><span style="width:84%"></span></div>
+        </div>
+      </div>
+      <div class="chips">
+        <span class="chip">Federal Govt (cleared roles)</span>
+        <span class="chip">US & Canada hiring</span>
+        <span class="chip">Quebec experience</span>
+        <span class="chip">Stakeholder mgmt</span>
+        <span class="chip">Relationship mgmt</span>
+        <span class="chip">AI for recruiting</span>
+        <span class="chip">LinkedIn Recruiter</span>
+        <span class="chip">Dice • Monster • Indeed • CareerBuilder • ClearanceJobs</span>
+        <span class="chip">X-ray search</span>
+        <span class="chip">GitHub & social sourcing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="eyebrow">Experience Highlights</div>
+      <h3 class="title">7+ years placing talent across Banking, Tech & Public Sector</h3>
+      <div class="grid" style="grid-template-columns: .9fr 1.1fr; gap: 28px">
+        <div class="card">
+          <h4 style="margin-top:0">Clients supported</h4>
+          <p class="subtitle">Citi, TD Bank, Intel, Perspecta, US Marine Corps, Deloitte, State of Maine.</p>
+          <p style="margin-bottom:0">Roles across fraud/risk, data/quant, software QA/engineering, low-latency trading tech, embedded systems, and enterprise transformation.</p>
+        </div>
+        <div class="card">
+          <h4 style="margin-top:0">Career timeline</h4>
+          <div class="timeline">
+            <div class="item">
+              <p class="role">Recruiting Lead (IC)</p>
+              <p class="org">Motion Recruitment</p>
+              <ul class="bullets">
+                <li>Owned full-cycle searches and client relationships; led strategy without direct reports.</li>
+              </ul>
+            </div>
+            <div class="item">
+              <p class="role">Group Lead (6 months)</p>
+              <p class="org">4 Consulting</p>
+              <ul class="bullets">
+                <li>Coordinated niche technology mandates; built hiring plans with stakeholders.</li>
+              </ul>
+            </div>
+            <div class="item">
+              <p class="role">Mentor (2 years)</p>
+              <p class="org">Artech</p>
+              <ul class="bullets">
+                <li>Mentored junior recruiters on sourcing, screening, and interviewer enablement.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cta" style="margin-top:14px">
+        <a class="btn" href="resume.pdf" download>Download Detailed Resume</a>
+        <a class="btn ghost" href="https://github.com/MahendraTACAN?tab=repositories" target="_blank" rel="noreferrer">View GitHub activity</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="eyebrow">Recommendations</div>
+      <h3 class="title">What clients & partners say</h3>
+      <div class="testimonials">
+        <div class="card t">
+          <div class="avatar-zero"></div>
+          <div>
+            <h4>Natalie Lerman <small>• Senior Software QA Analyst</small></h4>
+            <small>Client • Aug 15, 2025</small>
+            <blockquote>“Mahendra represented me for my latest job. He acted very professionally—negotiated on my behalf, provided advice and guidance, helped with paperwork, scheduling, and organization. I recommend Mahendra as a good and trusted agent.”</blockquote>
+          </div>
+        </div>
+        <div class="card t">
+          <div class="avatar-zero"></div>
+          <div>
+            <h4>Blair Wang, FRM <small>• Senior Research Analyst (Quant)</small></h4>
+            <small>Client • Jun 23, 2025</small>
+            <blockquote>“I was consistently impressed by Mahendra’s professionalism, dedication, and deep understanding of recruitment. He blends strategic thinking with genuine care for candidates and hiring managers—identifying talent, building strong relationships, and aligning people with the right opportunities.”</blockquote>
+          </div>
+        </div>
+        <div class="card t">
+          <div class="avatar-zero"></div>
+          <div>
+            <h4>Amit Verma <small>• Technical Architect, RPA & Python</small></h4>
+            <small>Teacher • Aug 26, 2023</small>
+            <blockquote>“He has excellent skills in finding the right candidates for the right opportunities. Strong technical understanding and relationship skills—an asset to any company.”</blockquote>
+          </div>
+        </div>
+        <div class="card t">
+          <div class="avatar-zero"></div>
+          <div>
+            <h4>Robert McGowan <small>• Technical Support Engineer</small></h4>
+            <small>Client • Oct 19, 2020</small>
+            <blockquote>“Mahendra helped me get a job after being unemployed for almost two years. Thanks, Mahendra!”</blockquote>
+          </div>
+        </div>
+        <div class="card t">
+          <div class="avatar-zero"></div>
+          <div>
+            <h4>Kelly Drow, MBA <small>• Data & Revenue Analytics</small></h4>
+            <small>Client • Oct 1, 2020</small>
+            <blockquote>“Mahendra reached out with a role I liked. He encouraged me to try and it became one of my best interview experiences. I’m now under contract in a great role that fits my skills and growth goals.”</blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="eyebrow">Contact</div>
+      <h3 class="title">Let’s work together</h3>
+      <div class="contact-grid">
+        <div class="contact-card"><span>✉️</span> <a href="mailto:msmoure0024@gmail.com">msmoure0024@gmail.com</a></div>
+        <div class="contact-card"><span>☎️</span> <a href="tel:+918319497978">+91 8319497978</a></div>
+        <div class="contact-card"><span>🌍</span> Bhopal, Madhya Pradesh, India</div>
+      </div>
+      <div class="cta" style="margin-top:16px">
+        <a class="btn primary" href="mailto:msmoure0024@gmail.com?subject=Hiring%20Inquiry%20via%20Portfolio">Start a conversation</a>
+        <a class="btn" href="https://www.linkedin.com/in/mahendramoure/" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <small>© <span id="year"></span> Mahendra Singh Moure</small>
+      <div style="display:flex;gap:14px">
+        <a href="https://github.com/MahendraTACAN" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/mahendramoure/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="#">Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mahendra Singh Moure",
+    "jobTitle": "Recruiter",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bhopal",
+      "addressRegion": "Madhya Pradesh",
+      "addressCountry": "IN"
+    },
+    "url": "https://MahendraTACAN.github.io/",
+    "email": "mailto:msmoure0024@gmail.com",
+    "telephone": "+91-8319497978",
+    "sameAs": [
+      "https://github.com/MahendraTACAN",
+      "https://www.linkedin.com/in/mahendramoure/"
+    ]
+  }
+  </script>
+</body>
+</html>
